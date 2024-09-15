@@ -51,13 +51,11 @@ router.post("/login", async (req, res) => {
       expiresIn: "1h",
     });
     res.cookie("profile", token, {
-      httpOnly: true, // Prevent JavaScript access to the cookie (optional for security)
       secure: true, // Only send cookie over HTTPS
       sameSite: "None", // Required for cross-site cookie usage in modern browsers
       maxAge: 24 * 60 * 60 * 1000, // Cookie expiration: 1 day
     });
     res.cookie("user", username, {
-      httpOnly: true, // Prevent JavaScript access to the cookie (optional for security)
       secure: true, // Only send cookie over HTTPS
       sameSite: "None", // Required for cross-site cookie usage in modern browsers
       maxAge: 24 * 60 * 60 * 1000, // Cookie expiration: 1 day
