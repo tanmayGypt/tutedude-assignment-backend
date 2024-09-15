@@ -15,7 +15,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "https://taupe-cactus-fb9d41.netlify.app/",
+    origin: ["*"],
     credentials: true,
   })
 );
