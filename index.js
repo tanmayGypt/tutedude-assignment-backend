@@ -15,10 +15,8 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: [
-      "https://66e7502fa6c26f0008406a80--taupe-cactus-fb9d41.netlify.app",
-      "http://localhost:3000",
-    ],
+    origin: "https://66e7502fa6c26f0008406a80--taupe-cactus-fb9d41.netlify.app",
+
     credentials: true,
   })
 );
